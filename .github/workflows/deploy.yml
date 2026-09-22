@@ -21,7 +21,7 @@ jobs:
           script: |
             export NVM_DIR="$HOME/.nvm"
             [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-            cd /home/ubuntu
+            cd /home/ubuntu/test-nodejs
             git pull origin main
             npm install
             pm2 restart demo-app || pm2 start app.js --name demo-app
